@@ -43,14 +43,33 @@ export default function Home() {
       localStorage.setItem('all_visitors', JSON.stringify(allVisitors))
     }
 
-    // Auto-play song when page loads
-    if (audioRef.current) {
-      audioRef.current.play().then(() => {
-        setIsPlaying(true)
-      }).catch(() => {
-        // Autoplay blocked by browser
-        setIsPlaying(false)
-      })
+    // Auto-play song when page loads with user interaction fallback
+    const playAudio = () => {
+      if (audioRef.current) {
+        audioRef.current.play().then(() => {
+          setIsPlaying(true)
+        }).catch(() => {
+          setIsPlaying(false)
+        })
+      }
+    }
+
+    // Try autoplay immediately
+    setTimeout(playAudio, 1000)
+    
+    // Also try on first user interaction
+    const handleFirstInteraction = () => {
+      playAudio()
+      document.removeEventListener('click', handleFirstInteraction)
+      document.removeEventListener('touchstart', handleFirstInteraction)
+    }
+    
+    document.addEventListener('click', handleFirstInteraction)
+    document.addEventListener('touchstart', handleFirstInteraction)
+    
+    return () => {
+      document.removeEventListener('click', handleFirstInteraction)
+      document.removeEventListener('touchstart', handleFirstInteraction)
     }
   }, [])
 
@@ -85,8 +104,9 @@ export default function Home() {
 
   return (
     <>
-      <audio ref={audioRef} loop>
+      <audio ref={audioRef} loop preload="auto">
         <source src="/song.mp3" type="audio/mpeg" />
+        <source src="/assests/Black Joy! (final).mp3" type="audio/mpeg" />
       </audio>
       
       <button className="audio-control" onClick={toggleAudio}>
