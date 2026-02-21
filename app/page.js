@@ -46,6 +46,7 @@ export default function Home() {
     // Auto-play song when page loads with user interaction fallback
     const playAudio = () => {
       if (audioRef.current) {
+        audioRef.current.volume = 0.7
         audioRef.current.play().then(() => {
           setIsPlaying(true)
         }).catch(() => {
@@ -54,7 +55,9 @@ export default function Home() {
       }
     }
 
-    // Try autoplay immediately
+    // Try autoplay immediately and repeatedly
+    setTimeout(playAudio, 100)
+    setTimeout(playAudio, 500)
     setTimeout(playAudio, 1000)
     
     // Also try on first user interaction
@@ -104,7 +107,7 @@ export default function Home() {
 
   return (
     <>
-      <audio ref={audioRef} loop preload="auto">
+      <audio ref={audioRef} loop preload="auto" autoPlay>
         <source src="/song.mp3" type="audio/mpeg" />
         <source src="/assests/Black Joy! (final).mp3" type="audio/mpeg" />
       </audio>
