@@ -9,6 +9,11 @@ export const metadata = {
   title: 'Millo My & Aura Hall | Bay Area AI Rap Duo - The Future of Music & Technology',
   description: 'Millo My & Aura Hall are the Bay Area\'s pioneering AI-powered rap duo, blending technology, culture, and independent artistry to redefine the future of music.',
   keywords: 'AI music, Bay Area rap, AI artists, music technology, AI rap group, future of music, tech-driven artists, independent music, Bay Area culture',
+  other: {
+    'cache-control': 'no-cache, no-store, must-revalidate',
+    'pragma': 'no-cache',
+    'expires': '0'
+  },
   openGraph: {
     title: 'Millo My & Aura Hall | Bay Area AI Music Pioneers',
     description: 'The Bay Area\'s first AI-powered rap duo revolutionizing music through technology and culture.',
