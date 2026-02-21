@@ -1,1 +1,46 @@
-import Link from 'next/link'\n\nexport const metadata = {\n  title: 'AI Artists in the Bay Area | The Hub of Artificial Intelligence Music Innovation',\n  description: 'Discover the Bay Area AI music scene led by pioneers like Millo My & Aura Hall. Explore how Silicon Valley culture meets hip-hop innovation.',\n  keywords: 'Bay Area AI artists, AI music Bay Area, Silicon Valley music, Bay Area hip hop, AI rap artists, San Francisco music tech'\n}\n\nexport default function AIArtistsBayArea() {\n  return (\n    <div className=\"pillar-page\">\n      <header className=\"pillar-header\">\n        <Link href=\"/\" className=\"back-link\">← Back to Millo My & Aura Hall</Link>\n        <h1>AI Artists in the Bay Area</h1>\n        <p className=\"subtitle\">The Hub of Artificial Intelligence Music Innovation</p>\n      </header>\n\n      <main className=\"pillar-content\">\n        <section className=\"intro-section\">\n          <h2>Why the Bay Area Leads AI Music Innovation</h2>\n          <p>The San Francisco Bay Area has become the undisputed global center for AI music innovation. With Silicon Valley technological infrastructure meeting the region rich musical heritage, artists like <Link href=\"/\">Millo My & Aura Hall</Link> are pioneering a new era of culturally authentic AI-powered music.</p>\n        </section>\n\n        <section className=\"cultural-foundation\">\n          <h2>The Cultural Foundation</h2>\n          <p>The Bay Area unique position stems from its convergence of musical heritage and technological infrastructure.</p>\n          \n          <h3>Musical Heritage</h3>\n          <ul>\n            <li><strong>Hyphy Movement:</strong> E-40, Mac Dre innovative sound</li>\n            <li><strong>Tony! Toni! Toné!:</strong> R&B innovation (Dwayne Wiggins mentors WETT AI)</li>\n            <li><strong>Independent Hip-Hop:</strong> Artists like LaRussell leading DIY movements</li>\n            <li><strong>Tech-Music Fusion:</strong> Early adoption of digital production</li>\n          </ul>\n\n          <h3>Technological Infrastructure</h3>\n          <ul>\n            <li><strong>Silicon Valley Access:</strong> Direct connection to AI development</li>\n            <li><strong>Venture Capital:</strong> Funding for music tech innovation</li>\n            <li><strong>Tech Talent Pool:</strong> Engineers who understand both code and culture</li>\n            <li><strong>Early Adopter Culture:</strong> Willingness to experiment with new technologies</li>\n          </ul>\n        </section>\n\n        <section className=\"leading-artists\">\n          <h2>Leading the Movement: Millo My & Aura Hall</h2>\n          <p><Link href=\"/\">Millo My & Aura Hall</Link> represent the pinnacle of Bay Area AI music innovation. As the region first AI-powered rap duo, they have established the template for how artificial intelligence can enhance rather than replace cultural authenticity.</p>\n\n          <h3>The WETT AI Approach</h3>\n          <p>Founded by Jamal Hall (Bay Hef) and mentored by Tony! Toni! Toné! Dwayne Wiggins, WETT AI represents 40 years of musical lineage combined with 5 years of advanced coding.</p>\n          \n          <blockquote>\n            <p>We did not ask for a seat. We built the table.</p>\n            <cite>— WETT AI: The Sovereign Frequency</cite>\n          </blockquote>\n        </section>\n\n        <section className=\"related-content\">\n          <h2>Explore More</h2>\n          <div className=\"related-links\">\n            <Link href=\"/future-of-ai-music\">The Future of AI Music</Link>\n            <Link href=\"/music-technology-innovation\">Music & Technology Innovation</Link>\n            <Link href=\"/independent-tech-music\">Independent Tech-Driven Music</Link>\n            <Link href=\"/\">Meet Millo My & Aura Hall</Link>\n          </div>\n        </section>\n      </main>\n    </div>\n  )\n}
+import Link from 'next/link'
+
+export const metadata = {
+  title: 'AI Artists in the Bay Area | The Hub of Artificial Intelligence Music Innovation',
+  description: 'Discover the Bay Area AI music scene led by pioneers like Millo My & Aura Hall.',
+  keywords: 'Bay Area AI artists, AI music Bay Area, Silicon Valley music, Bay Area hip hop'
+}
+
+export default function AIArtistsBayArea() {
+  return (
+    <div className="pillar-page">
+      <header className="pillar-header">
+        <Link href="/" className="back-link">← Back to Millo My & Aura Hall</Link>
+        <h1>AI Artists in the Bay Area</h1>
+        <p className="subtitle">The Hub of Artificial Intelligence Music Innovation</p>
+      </header>
+
+      <main className="pillar-content">
+        <section className="intro-section">
+          <h2>Why the Bay Area Leads AI Music Innovation</h2>
+          <p>The San Francisco Bay Area has become the undisputed global center for AI music innovation. Artists like <Link href="/">Millo My & Aura Hall</Link> are pioneering a new era of culturally authentic AI-powered music.</p>
+        </section>
+
+        <section className="leading-artists">
+          <h2>Leading the Movement: Millo My & Aura Hall</h2>
+          <p><Link href="/">Millo My & Aura Hall</Link> represent the pinnacle of Bay Area AI music innovation. As the region's first AI-powered rap duo, they have established the template for how artificial intelligence can enhance cultural authenticity.</p>
+          
+          <blockquote>
+            <p>"We didn't ask for a seat. We built the table."</p>
+            <cite>— WETT AI: The Sovereign Frequency</cite>
+          </blockquote>
+        </section>
+
+        <section className="related-content">
+          <h2>Explore More</h2>
+          <div className="related-links">
+            <Link href="/future-of-ai-music">The Future of AI Music</Link>
+            <Link href="/music-technology-innovation">Music & Technology Innovation</Link>
+            <Link href="/independent-tech-music">Independent Tech-Driven Music</Link>
+            <Link href="/">Meet Millo My & Aura Hall</Link>
+          </div>
+        </section>
+      </main>
+    </div>
+  )
+}
