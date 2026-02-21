@@ -1,9 +1,11 @@
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 export default function Home() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const [bioExpanded, setBioExpanded] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef(null)
   
   const utmSource = typeof window !== 'undefined' 
     ? new URLSearchParams(window.location.search).get('utm_content') || 'direct'
@@ -40,6 +42,16 @@ export default function Home() {
       allVisitors.push(visitorData)
       localStorage.setItem('all_visitors', JSON.stringify(allVisitors))
     }
+
+    // Auto-play song when page loads
+    if (audioRef.current) {
+      audioRef.current.play().then(() => {
+        setIsPlaying(true)
+      }).catch(() => {
+        // Autoplay blocked by browser
+        setIsPlaying(false)
+      })
+    }
   }, [])
 
   const trackEvent = (action) => {
@@ -48,6 +60,18 @@ export default function Home() {
         event_category: 'engagement',
         event_label: utmSource
       })
+    }
+  }
+
+  const toggleAudio = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause()
+        setIsPlaying(false)
+      } else {
+        audioRef.current.play()
+        setIsPlaying(true)
+      }
     }
   }
 
@@ -61,6 +85,13 @@ export default function Home() {
 
   return (
     <>
+      <audio ref={audioRef} loop>
+        <source src="/song.mp3" type="audio/mpeg" />
+      </audio>
+      
+      <button className="audio-control" onClick={toggleAudio}>
+        {isPlaying ? '⏸️' : '▶️'}
+      </button>
       <div className="grain"></div>
       <div className="scanline"></div>
       <div className="bg-gradient" style={{

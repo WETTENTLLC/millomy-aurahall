@@ -516,6 +516,27 @@ body {
   transform: translateY(-2px);
 }
 
+.audio-control {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 255, 255, 0.1);
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.audio-control:hover {
+  background: rgba(0, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
 .system-data {
   position: fixed;
   top: 1.5rem;
