@@ -1,5 +1,7 @@
 'use client'
 
+import './vote.css'
+
 import { useEffect, useMemo, useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 
@@ -205,7 +207,7 @@ export default function VotePage() {
             <button className="vote-secondary" onClick={signOut}>Sign out</button>
           </section>
         )}
-        <footer className="vote-footer">WETT GIRLS · MILL0 MY & AURA HALL · OFFICIAL COMPETITION</footer>
+        <footer className="vote-footer">WETT GIRLS · MILLO MY & AURA HALL · OFFICIAL COMPETITION</footer>
       </div>
     </main>
   )
