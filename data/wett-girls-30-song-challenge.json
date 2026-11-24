@@ -1,0 +1,154 @@
+{
+  "competition": "WETT Girls 30-Song Challenge",
+  "version": 1,
+  "status": "draft",
+  "songs": [
+    {
+      "number": 1,
+      "title": "Silk Concrete"
+    },
+    {
+      "number": 2,
+      "title": "Wait A Minute"
+    },
+    {
+      "number": 3,
+      "title": "Move Around"
+    },
+    {
+      "number": 4,
+      "title": "Fresh Water"
+    },
+    {
+      "number": 5,
+      "title": "Pocket Change"
+    },
+    {
+      "number": 6,
+      "title": "Thorn Heart"
+    },
+    {
+      "number": 7,
+      "title": "I Know What I Know"
+    },
+    {
+      "number": 8,
+      "title": "Mo Scratch"
+    },
+    {
+      "number": 9,
+      "title": "KIR (Keep It Real)"
+    },
+    {
+      "number": 10,
+      "title": "Pick Up"
+    },
+    {
+      "number": 11,
+      "title": "Chock On It"
+    },
+    {
+      "number": 12,
+      "title": "Cuddle Me"
+    },
+    {
+      "number": 13,
+      "title": "FFE (Fine Forever)"
+    },
+    {
+      "number": 14,
+      "title": "Sex Release"
+    },
+    {
+      "number": 15,
+      "title": "Body Rub"
+    },
+    {
+      "number": 16,
+      "title": "Ballers"
+    },
+    {
+      "number": 17,
+      "title": "ISDBM"
+    },
+    {
+      "number": 18,
+      "title": "Bird Call"
+    },
+    {
+      "number": 19,
+      "title": "Beat Me There"
+    },
+    {
+      "number": 20,
+      "title": "Check In"
+    },
+    {
+      "number": 21,
+      "title": "Burn Rubber"
+    },
+    {
+      "number": 22,
+      "title": "My Old Phone"
+    },
+    {
+      "number": 23,
+      "title": "I Don't Want to Go Outside"
+    },
+    {
+      "number": 24,
+      "title": "Make Me Feel Sexy"
+    },
+    {
+      "number": 25,
+      "title": "Fur"
+    },
+    {
+      "number": 26,
+      "title": "Where's Santa Now?"
+    },
+    {
+      "number": 27,
+      "title": "Thank You"
+    },
+    {
+      "number": 28,
+      "title": "Shot O'Clock"
+    },
+    {
+      "number": 29,
+      "title": "Layover"
+    },
+    {
+      "number": 30,
+      "title": "Take Me"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1",
+      "name": "Opening Round",
+      "fieldSize": 30,
+      "advance": 15,
+      "maxSelections": 2
+    },
+    {
+      "id": "round-2",
+      "name": "Top 15",
+      "fieldSize": 15,
+      "advance": 8,
+      "maxSelections": 2
+    },
+    {
+      "id": "final",
+      "name": "Top 8 Final",
+      "fieldSize": 8,
+      "advance": 1,
+      "maxSelections": 1
+    }
+  ],
+  "notes": [
+    "Song titles and original challenge numbers are preserved as supplied by the campaign owner.",
+    "Round dates, tie-break procedure, voter verification method, and prize fulfillment details require final approval before launch."
+  ]
+}
